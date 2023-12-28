@@ -4,8 +4,9 @@ body {
   color: hsl(220, 14%, 71%);
 }
 
-.intro-container {
+.container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
