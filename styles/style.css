@@ -1,8 +1,9 @@
 :root {
   --bg: #282c34;
   --bg2: #2b313b;
+  --bg3: #5c6370;
   --fg: #abb2bf;
-  --fg2: #636e83;
+  --fg2: #768196;
   --red: #e06c75;
   --orange: #d19a66;
   --yellow: #e5c07b;
@@ -171,6 +172,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    justify-content: center;
   }
 }
 
@@ -248,9 +250,9 @@ a:hover {
   }
 
   .info-container {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    padding-top: 0.5rem;
 
     #about {
       order: -1;
