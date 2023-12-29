@@ -180,6 +180,7 @@ a:hover {
   padding: 0.4rem;
   border: 1px solid var(--fg2);
   border-radius: 0.5rem;
+  text-align: center;
 }
 
 .arrow-down-container {
@@ -222,6 +223,10 @@ a:hover {
 }
 
 @media only screen and (max-width: 767px) {
+  .splash-container {
+    grid-template-rows: 2fr auto 0.75fr 1.25fr;
+  }
+  
   .splash-container .splash {
     width: 80vw;
 
