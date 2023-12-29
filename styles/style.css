@@ -1,162 +1,254 @@
+:root {
+  --bg: #282c34;
+  --bg2: #2b313b;
+  --fg: #abb2bf;
+  --fg2: #636e83;
+  --red: #e06c75;
+  --orange: #d19a66;
+  --yellow: #e5c07b;
+  --green: #98c379;
+  --cyan: #56b6c2;
+  --blue: #61afef;
+  --purple: #c678dd;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: sans-serif;
-  background-color: hsl(220, 13%, 18%);
-  color: hsl(220, 14%, 71%);
+  background-color: var(--bg);
+  color: var(--fg);
+  font-size: 1.1rem;
 }
 
 a:link {
-  color: hsl(220, 14%, 71%);
+  color: var(--fg);
+  transition: 0.3s;
 }
 
 a:visited {
-  color: hsl(220, 9%, 55%);
+  color: var(--fg);
 }
 
-.flex-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+a:hover {
+  color: white;
+}
+
+.splash-container {
+  display: grid;
+  grid-template-rows: 2fr auto repeat(2, 1fr);
+  justify-items: center;
   height: 100vh;
+
+  .splash {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50vw;
+    gap: 0.5rem;
+    grid-row: 2 / 3;
+    padding-bottom: 10vh;
+
+    #hello {
+      font-size: 4rem;
+      color: var(--yellow);
+    }
+
+    #greeting {
+      font-size: 6rem;
+
+      #name {
+        color: var(--green);
+        font-weight: bold;
+      }
+    }
+
+    #description {
+      font-size: 2rem;
+      line-height: 1.25;
+
+      #currently {
+        color: var(--red);
+      }
+
+      #major {
+        color: var(--blue);
+        font-weight: bold;
+      }
+
+      #university {
+        color: var(--purple);
+        font-weight: bold;
+      }
+    }
+  }
 }
 
-.intro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 50vw;
-  padding-bottom: 10vh;
-  gap: 0.5rem;
-}
-
-.grid-container {
+.info-container {
   height: 100vh;
   display: grid;
   grid-template-columns: 0.5fr 0.75fr 2fr 0.5fr;
   grid-template-rows: 0.25fr 0.5fr 2fr 0.25fr;
-  gap: 0.6rem 1rem;
+  gap: 0.5rem 1rem;
+
+  #contact {
+    grid-area: 2 / 2 / 4 / 3;
+
+    .skill-category {
+      color: var(--green);
+    }
+
+    #contact-container {
+      display: grid;
+      grid-template-columns: max-content auto;
+      align-items: center;
+      gap: 0.5rem;
+
+      .icon {
+        /* filter: brightness(0) saturate(100%) invert(84%) sepia(24%) saturate(129%) hue-rotate(180deg) brightness(82%) contrast(86%); */
+        filter: brightness(0) saturate(100%) invert(83%) sepia(34%) saturate(552%) hue-rotate(343deg) brightness(93%) contrast(93%);
+        height: 1rem;
+        grid-column: 1 / 2;
+      }
+
+      .text {
+        grid-column: 2 / 3;
+      }
+    }
+
+    #contact-label {
+      color: var(--yellow);
+    }
+
+    #education-label {
+      color: var(--purple);
+    }
+
+    #skills-label {
+      color: var(--green);
+    }
+  }
+
+  #about {
+    grid-area: 2 / 3 / 3 / 4;
+
+    #about-label {
+      color: var(--red);
+    }
+  }
+
+  #experience {
+    grid-area: 3 / 3 / 4 / 4;
+
+    #experience-label {
+      color: var(--blue);
+    }
+  }
 }
 
 .grid-item {
-  background-color: hsl(218, 15%, 20%);
+  background-color: var(--bg2);
   border-radius: 1rem;
-  border: 1px solid hsl(220, 9%, 55%);
-  padding: 0.4rem 1rem 1rem;
+  border: 1px solid var(--fg2);
+  padding: 0.5rem 1rem 1rem;
   display: flex;
   justify-content: center;
   align-items: left;
   gap: 0.5rem;
   flex-direction: column;
   line-height: 1.25;
+
+  .sub-item {
+    border-top: 1px solid var(--fg2);
+    width: auto;
+    margin: 0.5rem -1rem -1rem -1rem;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 
 .item-label {
   font-weight: bold;
-  background-color: hsl(218, 15%, 20%);
+  background-color: var(--bg2);
   padding: 0.4rem;
-  border: 1px solid hsl(224, 9%, 40%);
+  border: 1px solid var(--fg2);
   border-radius: 0.5rem;
-  color: hsl(187, 47%, 55%);
 }
 
-.contact-container {
-  display: grid;
-  grid-template-columns: max-content auto;
-  align-items: center;
-  gap: 0.5rem;
+.arrow-down-container {
+  grid-row-start: 4;
 
-  & .icon {
-    filter: brightness(0) saturate(100%) invert(84%) sepia(24%) saturate(129%) hue-rotate(180deg) brightness(82%) contrast(86%);
-    height: 1rem;
-    grid-column-start: 1;
-    grid-column-end: 2;
-  }
-
-  & .text {
-    grid-column-start: 2;
-    grid-column-end: 3;
+  .arrow-down {
+    filter: invert(93%) sepia(18%) saturate(4426%) hue-rotate(156deg) brightness(83%) contrast(81%);
+    width: 4rem;
+    animation: moveUpDown 2s ease-in-out infinite;
   }
 }
 
-.arrow-down {
-  filter: invert(93%) sepia(18%) saturate(4426%) hue-rotate(156deg) brightness(83%) contrast(81%);
-  width: 3rem;
-}
+@keyframes moveUpDown {
 
-#hello {
-  font-size: 4rem;
-  color: hsl(39, 67%, 69%);
-}
-
-#greeting {
-  font-size: 6rem;
-
-  & #name {
-    color: hsl(95, 38%, 62%);
-    font-weight: bold;
-  }
-}
-
-#description {
-  font-size: 2rem;
-  line-height: 1.25;
-
-  & #currently {
-    color: hsl(355, 65%, 65%);
+  0%,
+  100% {
+    transform: translateY(0);
   }
 
-  & #major {
-    color: hsl(207, 82%, 66%);
-    font-weight: bold;
+  50% {
+    transform: translateY(-10px);
   }
-
-  & #university {
-    color: hsl(286, 60%, 67%);
-    font-weight: bold;
-  }
-}
-
-#info {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 4;
-}
-
-#about {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-
-#experience {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 3;
-  grid-row-end: 4;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .intro-flex {
+  .splash-container .splash {
     width: 80vw;
+  }
+
+  .info-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10vw;
+
+    #about {
+      order: -1;
+    }
   }
 }
 
 @media only screen and (max-width: 767px) {
-  .intro-flex {
+  .splash-container .splash {
     width: 80vw;
+
+    #hello {
+      font-size: 3rem;
+    }
+
+    #greeting {
+      font-size: 4rem;
+    }
+
+    #description {
+      font-size: 1.5rem;
+    }
+
+    .arrow-down-container .arrow-down {
+      width: 3rem;
+    }
   }
 
-  #hello {
-    font-size: 3rem;
-  }
+  .info-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 
-  #greeting {
-    font-size: 4rem;
-  }
-
-  #description {
-    font-size: 1.5rem;
+    #about {
+      order: -1;
+    }
   }
 }
