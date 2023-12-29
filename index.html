@@ -5,25 +5,65 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Daniel Liu</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-  <div class="container">
-    <div class="intro-flex">
+  <div class="flex-container">
+    <div class="intro">
       <span id="hello">Hi there! &#128578;</span>
       <span id="greeting">
         I'm
         <span id="name">Daniel.</span>
       </span>
       <span id="description">
-        <span id="currently">Currently, </span>
-        I'm studying
-        <span id="major">Computer Science</span>
+        I'm
+        <span id="currently">currently</span>
+        studying
+        <span id="major">computer science</span>
         at
-        <span id="school">Northwestern University.</span>
+        <span id="university">Northwestern University.</span>
       </span>
     </div>
+  </div>
+  <div class="grid-container">
+    <fieldset class="grid-item" id="info">
+      <legend class="item-label">Contact</legend>
+      <div class="contact-container">
+        <img src="images/telephone.svg" alt="Telephone icon" class="icon" />
+        <span class="contact-content">
+          +1 (917) 650-5175
+        </span>
+        <img src="images/envelope.svg" alt="Email icon" class="icon" />
+        <a href="mailto:daniel-a-liu@outlook.com" class="text">
+          daniel-a-liu@outlook.com
+        </a>
+        <img src="images/LI-In-Bug.png" alt="LinkedIn icon" class="icon" />
+        <a href="https://www.linkedin.com/in/daniel-a-liu/" class="text">
+          LinkedIn
+        </a>
+        <img src="images/github-mark-white.png" alt="GitHub icon" class="icon" />
+        <a href="https://github.com/dal-liu" class="text">
+          GitHub
+        </a>
+        <img src="images/file-earmark-text.svg" alt="File icon" class="icon" />
+        <a href="https://danielliu.dev/assets/Daniel_Liu_resume.pdf" class="text">
+          Resume
+        </a>
+      </div>
+    </fieldset>
+    <fieldset class="grid-item" id="about">
+      <legend class="item-label">About Me</legend>
+      <span>
+        I'm currently a junior majoring in computer science in the McCormick School of Engineering at Northwestern
+        University. I'm also looking for a
+        software engineering internship for summer 2024!
+      </span>
+      <span>In my free time, I enjoy running, listening to music, and watching various sitcoms and sports.</span>
+    </fieldset>
+    <fieldset class="grid-item" id="experience">
+      <legend class="item-label">Experience</legend>
+    </fieldset>
   </div>
 </body>
 
