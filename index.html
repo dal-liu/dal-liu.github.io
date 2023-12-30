@@ -6,12 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Daniel Liu</title>
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,300&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-  <div class="splash-container">
+  <div class="splash-page">
     <div class="splash">
-      <span id="hello">Hi there! &#128578;</span>
+      <span id="hello">Hi there! :)</span>
       <span id="greeting">
         I'm
         <span id="name">Daniel.</span>
@@ -25,18 +29,15 @@
         <span id="university">Northwestern University.</span>
       </span>
     </div>
-    <a href="" class="arrow-down-container">
-      <img src="images/chevron-double-down.svg" alt="Arrow pointing down icon" class="arrow-down" />
-    </a>
+    <img src="images/chevron-double-down.svg" alt="Arrow pointing down icon" class="arrow-down" />
   </div>
-  <div class="info-container" id="info">
+
+  <!--------------------------------------------------------------------------------------------->
+
+  <div class="info-page" id="info">
     <fieldset class="grid-item" id="contact">
       <legend class="item-label" id="contact-label">Contact</legend>
       <div id="contact-container">
-        <img src="images/telephone.svg" alt="Telephone icon" class="icon" id="phone" />
-        <span class="contact-content" id="phone">
-          +1 (917) 650-5175
-        </span>
         <img src="images/envelope.svg" alt="Email icon" class="icon" id="email" />
         <a href="mailto:daniel-a-liu@outlook.com" class="text" id="email">
           daniel-a-liu@outlook.com
@@ -51,7 +52,7 @@
         </a>
         <img src="images/file-earmark-text.svg" alt="File icon" class="icon" id="resume" />
         <a href="https://danielliu.dev/assets/Daniel_Liu_resume.pdf" class="text" id="resume">
-          Resume (PDF)
+          Résumé (PDF)
         </a>
       </div>
       <fieldset class="sub-item">
@@ -73,23 +74,12 @@
             <span class="dot-outline">
               <span class="dot" id="education-dot"></span>
             </span>
-            <span class="dot-link"></span>
           </div>
           <div class="list-item-content" id="item2">
             <span class="name">University of Wisconsin-Madison</span>
             <span class="location">Madison, WI</span>
             <span class="degree">B.S. Computer Science</span>
             <span class="date">Sep. 2021 - May 2022</span>
-          </div>
-          <div class="dot-container">
-            <span class="dot-outline" id="item3">
-              <span class="dot" id="education-dot"></span>
-            </span>
-          </div>
-          <div class="list-item-content" id="item3">
-            <span class="name">Edgemont Jr./Sr. High School</span>
-            <span class="location">Scarsdale, NY</span>
-            <span class="date">Sep. 2017 - June 2021</span>
           </div>
         </div>
       </fieldset>
@@ -145,6 +135,18 @@
         </div>
       </div>
     </fieldset>
+  </div>
+
+  <!--------------------------------------------------------------------------------------------->
+
+  <!-- <div class="project-page">
+    <span id="title">Projects</span>
+  </div> -->
+
+  <!--------------------------------------------------------------------------------------------->
+
+  <div class="footer">
+    <span id="footer-text">Made with &#10084; by Daniel Liu</span>
   </div>
 
   <script src="scripts/scroll.js"></script>

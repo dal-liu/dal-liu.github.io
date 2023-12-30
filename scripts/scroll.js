@@ -1,13 +1,11 @@
-document
-  .querySelector('.arrow-down-container')
-  .addEventListener('click', (e) => {
-    e.preventDefault();
-    const info = document.querySelector('#info');
+document.querySelector('.arrow-down').addEventListener('click', (e) => {
+  e.preventDefault();
+  const info = document.querySelector('#info');
 
-    if (info) {
-      window.scrollTo({
-        top: info.offsetTop,
-        behavior: 'smooth',
-      });
-    }
-  });
+  if (info) {
+    window.scrollTo({
+      top: info.offsetTop,
+      behavior: 'smooth',
+    });
+  }
+});
