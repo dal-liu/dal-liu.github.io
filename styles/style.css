@@ -344,15 +344,15 @@ a:hover {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .splash-container .splash {
+  .splash-page .splash {
     width: 80vw;
   }
 
-  .info-container {
+  .info-page {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 5vh 5vw 0 5vw;
+    padding: 5vh 5vw 5vh 5vw;
 
     #about {
       order: -1;
@@ -361,11 +361,11 @@ a:hover {
 }
 
 @media only screen and (max-width: 767px) {
-  .splash-container {
+  .splash-page {
     grid-template-rows: 2fr auto 0.75fr 1.25fr;
   }
 
-  .splash-container .splash {
+  .splash-page .splash {
     width: 80vw;
 
     #hello {
@@ -379,16 +379,17 @@ a:hover {
     #description {
       font-size: 1.5rem;
     }
-
-    .arrow-down-container .arrow-down {
-      width: 3.5rem;
-    }
   }
 
-  .info-container {
+  .splash-page .arrow-down {
+    width: 3.5rem;
+  }
+
+  .info-page {
     display: flex;
     flex-direction: column;
     padding-top: 1rem;
+    padding: 1rem 0 5vh 0;
 
     #about {
       order: -1;
