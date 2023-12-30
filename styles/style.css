@@ -42,47 +42,47 @@ a:hover {
   grid-template-rows: 2fr auto repeat(2, 1fr);
   justify-items: center;
   height: 100vh;
+}
 
-  .splash {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50vw;
-    gap: 0.5rem;
-    grid-row: 2 / 3;
-    padding-bottom: 10vh;
+.splash {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50vw;
+  gap: 0.5rem;
+  grid-row: 2 / 3;
+  padding-bottom: 10vh;
 
-    #hello {
-      font-size: 4rem;
-      color: var(--yellow);
+  #hello {
+    font-size: 4rem;
+    color: var(--yellow);
+  }
+
+  #greeting {
+    font-size: 6rem;
+
+    #name {
+      color: var(--green);
+      font-weight: bold;
+    }
+  }
+
+  #description {
+    font-size: 2rem;
+    line-height: 1.25;
+
+    #currently {
+      color: var(--red);
     }
 
-    #greeting {
-      font-size: 6rem;
-
-      #name {
-        color: var(--green);
-        font-weight: bold;
-      }
+    #major {
+      color: var(--blue);
+      font-weight: bold;
     }
 
-    #description {
-      font-size: 2rem;
-      line-height: 1.25;
-
-      #currently {
-        color: var(--red);
-      }
-
-      #major {
-        color: var(--blue);
-        font-weight: bold;
-      }
-
-      #university {
-        color: var(--purple);
-        font-weight: bold;
-      }
+    #university {
+      color: var(--purple);
+      font-weight: bold;
     }
   }
 }
@@ -90,7 +90,7 @@ a:hover {
 .info-container {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 0.5fr 0.75fr 2fr 0.5fr;
+  grid-template-columns: 0.5fr 1fr 2fr 0.5fr;
   grid-template-rows: 0.25fr 0.5fr 2fr 0.25fr;
   gap: 0.5rem 1rem;
 
@@ -99,28 +99,6 @@ a:hover {
 
     .skill-category {
       color: var(--green);
-    }
-
-    #contact-container {
-      display: grid;
-      grid-template-columns: max-content auto;
-      align-items: center;
-      gap: 0.5rem;
-
-      .icon {
-        filter: brightness(0) saturate(100%) invert(83%) sepia(34%) saturate(552%) hue-rotate(343deg) brightness(93%) contrast(93%);
-        height: 1rem;
-        grid-column: 1 / 2;
-      }
-
-      .text {
-        grid-column: 2 / 3;
-      }
-
-      .company-icon {
-        height: 1rem;
-        grid-column: 1 / 2;
-      }
     }
 
     #contact-label {
@@ -178,6 +156,13 @@ a:hover {
     gap: 0.5rem;
     justify-content: center;
   }
+
+  .list-item-content {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2 / 3;
+    margin-top: 0.25rem;
+  }
 }
 
 .item-label {
@@ -197,6 +182,120 @@ a:hover {
     width: 5rem;
     animation: moveUpDown 2s ease-in-out infinite;
   }
+}
+
+.dot-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .dot-outline {
+    border: 1px solid var(--fg2);
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+
+    .dot {
+      height: 0.75rem;
+      width: 0.75rem;
+      border-radius: 50%;
+      display: inline-block;
+    }
+  }
+
+  .dot-link {
+    height: auto;
+    width: 1px;
+    background-color: var(--fg2);
+    grid-column: 1 / 2;
+    flex: 1;
+    margin-bottom: -0.5rem;
+  }
+}
+
+#contact-container {
+  display: grid;
+  grid-template-columns: max-content auto;
+  align-items: center;
+  gap: 0.5rem;
+
+  .icon {
+    filter: brightness(0) saturate(100%) invert(83%) sepia(34%) saturate(552%) hue-rotate(343deg) brightness(93%) contrast(93%);
+    height: 1rem;
+    grid-column: 1 / 2;
+  }
+
+  .text {
+    grid-column: 2 / 3;
+    width: max-content;
+  }
+
+  .company-icon {
+    height: 1rem;
+    grid-column: 1 / 2;
+  }
+}
+
+#education-container {
+  display: grid;
+  grid-template-columns: 1.5rem auto;
+  grid-template-rows: repeat(3, auto);
+  gap: 0.5rem 1rem;
+
+  #education-dot {
+    background-color: var(--purple);
+  }
+
+  .name {
+    color: var(--purple);
+    font-weight: bold;
+  }
+
+  .location {
+    font-weight: lighter;
+    font-style: italic;
+  }
+}
+
+#experience-container {
+  display: grid;
+  grid-template-columns: 1.5rem auto;
+  grid-template-rows: repeat(1, auto);
+  column-gap: 1rem;
+
+  #experience-dot {
+    background-color: var(--blue);
+  }
+
+  .name {
+    color: var(--blue);
+    font-weight: bold;
+  }
+
+  .company {
+    font-weight: lighter;
+    font-style: italic;
+  }
+
+  .description-list {
+    margin: 0.5rem 0 0;
+  }
+}
+
+#item1 {
+  grid-row: 1 / 2;
+}
+
+#item2 {
+  grid-row: 2 / 3;
+}
+
+#item3 {
+  grid-row: 3 / 4;
 }
 
 @keyframes moveUpDown {
@@ -232,7 +331,7 @@ a:hover {
   .splash-container {
     grid-template-rows: 2fr auto 0.75fr 1.25fr;
   }
-  
+
   .splash-container .splash {
     width: 80vw;
 
