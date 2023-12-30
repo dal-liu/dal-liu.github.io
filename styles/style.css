@@ -276,7 +276,12 @@ a:hover {
     font-weight: bold;
   }
 
-  .company {
+  .location {
+    font-weight: lighter;
+    font-style: italic;
+  }
+
+  .date {
     font-weight: lighter;
     font-style: italic;
   }
