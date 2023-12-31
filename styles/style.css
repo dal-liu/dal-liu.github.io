@@ -210,14 +210,21 @@ a:hover {
     flex: 1;
     margin-bottom: -0.5rem;
   }
+
+  .dot-elbow {
+    height: 4.75rem;
+    width: calc(0.75rem - 0.5px);
+    border-left: 1px solid var(--fg2);
+    border-bottom: 1px solid var(--fg2);
+    align-self: end;
+  }
 }
 
 .list-item-content {
   display: flex;
   flex-direction: column;
   grid-column: 2 / 3;
-  margin-top: 0.25rem;
-  gap: 0.1rem;
+  margin-top: 0.1rem;
 }
 
 .project-page {
@@ -239,10 +246,9 @@ a:hover {
   justify-content: center;
   align-items: center;
   height: 5vh;
-  background-color: var(--bg2);
   border-top: 1px solid var(--bg3);
   font-size: 0.75rem;
-  color: var(--fg2);
+  color: var(--bg3);
 }
 
 #contact-container {
@@ -312,10 +318,6 @@ a:hover {
   .date {
     font-weight: 300;
     font-style: italic;
-  }
-
-  .description-list {
-    margin: 0.4rem 0 0;
   }
 }
 
