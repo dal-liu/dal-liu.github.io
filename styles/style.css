@@ -1,9 +1,9 @@
 :root {
-  --bg: #282c34;
+  --bg: hsl(220, 13%, 18%);
   --bg2: #2b313b;
   --bg3: #5c6370;
-  --fg: #abb2bf;
-  --fg2: #768196;
+  --fg: hsl(219, 14%, 71%);
+  --fg2: hsl(219, 14%, 45%);
   --red: #e06c75;
   --orange: #d19a66;
   --yellow: #e5c07b;
@@ -25,12 +25,12 @@ body {
 }
 
 a:link {
-  color: var(--fg);
+  color: var(--yellow);
   transition: 0.3s;
 }
 
 a:visited {
-  color: var(--fg);
+  color: var(--yellow);
 }
 
 a:hover {
@@ -56,10 +56,12 @@ a:hover {
   #hello {
     font-size: 4rem;
     color: var(--yellow);
+    margin-bottom: -1.25rem;
   }
 
   #greeting {
     font-size: 6rem;
+    margin-bottom: -0.5rem;
 
     #name {
       color: var(--green);
@@ -212,7 +214,7 @@ a:hover {
   }
 
   .dot-elbow {
-    height: 4.75rem;
+    height: 4.65rem;
     width: calc(0.75rem - 0.5px);
     border-left: 1px solid var(--fg2);
     border-bottom: 1px solid var(--fg2);
@@ -263,7 +265,7 @@ a:hover {
     grid-column: 1 / 2;
   }
 
-  .text {
+  .contact-text {
     grid-column: 2 / 3;
     width: max-content;
   }
@@ -286,7 +288,6 @@ a:hover {
 
   .name {
     color: var(--purple);
-    font-weight: bold;
   }
 
   .location {
@@ -307,7 +308,6 @@ a:hover {
 
   .name {
     color: var(--blue);
-    font-weight: bold;
   }
 
   .location {
