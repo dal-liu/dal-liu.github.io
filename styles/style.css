@@ -1,9 +1,9 @@
 :root {
-  --bg: hsl(220, 13%, 18%);
-  --bg2: #2b313b;
-  --bg3: #5c6370;
-  --fg: hsl(219, 14%, 71%);
-  --fg2: hsl(219, 14%, 45%);
+  --bg: rgb(40, 44, 52);
+  --bg2: #2b323b;
+  --bg3: rgb(33, 37, 42);
+  --fg: #abb2bf;
+  --fg2: #636d83;
   --red: #e06c75;
   --orange: #d19a66;
   --yellow: #e5c07b;
@@ -22,6 +22,8 @@ body {
   background-color: var(--bg);
   color: var(--fg);
   font-size: 1.1rem;
+  margin: 0;
+  padding: 0;
 }
 
 a:link {
@@ -37,14 +39,52 @@ a:hover {
   color: white;
 }
 
-.splash-page {
+.navbar {
+  display: flex;
+  height: 50px;
+  flex-direction: row;
+  justify-content: center;
+  transition: 0.6s;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--fg2);
+
+  .nav-item {
+    margin: 0 1rem 0 1rem;
+    transition: 0.3s;
+  }
+
+  .nav-item:hover {
+    color: white;
+    cursor: pointer;
+  }
+
+  #nav-projects {
+    margin: 0 1.5rem 0 1rem;
+  }
+}
+
+.sticky {
+  background-color: rgb(40, 44, 52, 0.5);
+  backdrop-filter: blur(0.5rem);
+  box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.25);
+  display: flex;
+  opacity: 1;
+  color: var(--fg1);
+}
+
+.home-page {
   display: grid;
   grid-template-rows: 2fr auto repeat(2, 1fr);
   justify-items: center;
   height: 100vh;
 }
 
-.splash {
+.home-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -89,7 +129,7 @@ a:hover {
   }
 }
 
-.info-page {
+.about-page {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 0.5fr 1fr 2fr 0.5fr;
@@ -116,10 +156,10 @@ a:hover {
     }
   }
 
-  #about {
+  #about-me {
     grid-area: 2 / 3 / 3 / 4;
 
-    #about-label {
+    #about-me-label {
       color: var(--red);
     }
   }
@@ -201,6 +241,7 @@ a:hover {
       width: 0.75rem;
       border-radius: 50%;
       display: inline-block;
+      animation: changeSize 2s ease-in-out infinite;
     }
   }
 
@@ -247,10 +288,10 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 5vh;
-  border-top: 1px solid var(--bg3);
-  font-size: 0.75rem;
-  color: var(--bg3);
+  height: 50px;
+  font-size: 0.9rem;
+  color: var(--fg2);
+  background-color: var(--bg3);
 }
 
 #contact-container {
@@ -345,29 +386,59 @@ a:hover {
   }
 }
 
+@keyframes changeSize {
+  0% {
+    transform: scale(0.95);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(0.95);
+  }
+}
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .splash-page .splash {
+  .home-page .home-container {
     width: 80vw;
   }
 
-  .info-page {
+  .about-page {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     padding: 5vh 5vw 5vh 5vw;
 
-    #about {
+    #about-me {
       order: -1;
     }
   }
 }
 
 @media only screen and (max-width: 767px) {
-  .splash-page {
+  .navbar {
+    justify-content: space-evenly;
+
+    .nav-item-container {
+      margin: 0
+    }
+
+    .nav-item {
+      margin: 0;
+    }
+
+    #nav-projects {
+      margin: 0;
+    }
+  }
+
+  .home-page {
     grid-template-rows: 2fr auto 0.75fr 1.25fr;
   }
 
-  .splash-page .splash {
+  .home-page .home-container {
     width: 80vw;
 
     #hello {
@@ -383,17 +454,16 @@ a:hover {
     }
   }
 
-  .splash-page .arrow-down {
+  .home-page .arrow-down {
     width: 3.5rem;
   }
 
-  .info-page {
+  .about-page {
     display: flex;
     flex-direction: column;
-    padding-top: 1rem;
-    padding: 1rem 0 5vh 0;
+    padding: 0 0 5vh 0;
 
-    #about {
+    #about-me {
       order: -1;
     }
   }
