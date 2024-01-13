@@ -1,7 +1,7 @@
 :root {
-  --bg: rgb(40, 44, 52);
+  --bg: #282c34;
   --bg2: #2b323b;
-  --bg3: rgb(33, 37, 42);
+  --bg3: #21252a;
   --fg: #abb2bf;
   --fg2: #636d83;
   --red: #e06c75;
@@ -195,7 +195,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    justify-content: center;
+    justify-content: space-evenly;
   }
 }
 
@@ -322,6 +322,7 @@ a:hover {
   grid-template-columns: 1.5rem auto;
   grid-template-rows: repeat(3, auto);
   gap: 0.5rem 1rem;
+  align-content: space-evenly;
 
   #education-dot {
     background-color: var(--purple);
