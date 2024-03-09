@@ -1,154 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daniel Liu</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Daniel Liu</title>
-  <link rel="stylesheet" href="styles/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,300&display=swap"
-    rel="stylesheet">
-</head>
-
-<body>
-  <div class="navbar">
-    <div class="nav-item" id="nav-home">Home</div>
-    <div class="nav-item" id="nav-about">About</div>
-    <div class="nav-item" id="nav-projects">Projects</div>
-  </div>
-
-  <!--------------------------------------------------------------------------------------------->
-
-  <div class="home-page" id="home">
-    <div class="home-container">
-      <span id="hello">Hi there!</span>
-      <span id="greeting">
-        I'm
-        <span id="name">Daniel.</span>
-      </span>
-      <span id="description">
-        I'm
-        <span id="currently">currently</span>
-        studying
-        <span id="major">computer science</span>
-        at
-        <span id="university">Northwestern University.</span>
-      </span>
+  <body>
+    <div class="navbar">
+      <div class="nav-item" id="nav-home">Home</div>
+      <div class="nav-item" id="nav-about">About</div>
+      <div class="nav-item" id="nav-projects">Projects</div>
     </div>
-    <img src="images/chevron-double-down.svg" alt="Arrow pointing down icon" class="arrow-down" />
-  </div>
 
-  <!--------------------------------------------------------------------------------------------->
+    <!--------------------------------------------------------------------------------------------->
 
-  <div class="about-page" id="about">
-    <fieldset class="grid-item" id="contact">
-      <legend class="item-label" id="contact-label">Contact</legend>
-      <div id="contact-container">
-        <img src="images/github-mark-white.png" alt="GitHub icon" class="company-icon" id="github" />
-        <a href="https://github.com/dal-liu" class="contact-text" id="github">
-          GitHub
-        </a>
-        <img src="images/In-White-128@2x.png" alt="LinkedIn icon" class="company-icon" id="linkedin" />
-        <a href="https://www.linkedin.com/in/daniel-a-liu/" class="contact-text" id="linkedin">
-          LinkedIn
-        </a>
-        <img src="images/file-earmark-text.svg" alt="File icon" class="icon" id="resume" />
-        <a href="https://danielliu.dev/assets/Daniel_Liu_resume.pdf" class="contact-text" id="resume">
-          Résumé (PDF)
-        </a>
+    <div class="home-page" id="home">
+      <div class="home-container">
+        <span id="hello">Hi there!</span>
+        <span id="greeting">
+          I'm
+          <span id="name">Daniel.</span>
+        </span>
+        <span id="description">
+          I'm
+          <span id="currently">currently</span>
+          studying
+          <span id="major">computer science</span>
+          at
+          <span id="university">Northwestern University.</span>
+        </span>
       </div>
-      <fieldset class="sub-item">
-        <legend class="item-label" id="education-label">Education</legend>
-        <div id="education-container">
+      <img
+        src="images/chevron-double-down.svg"
+        alt="Arrow pointing down icon"
+        class="arrow-down"
+      />
+    </div>
+
+    <!--------------------------------------------------------------------------------------------->
+
+    <div class="about-page" id="about">
+      <fieldset class="grid-item" id="contact">
+        <legend class="item-label" id="contact-label">Contact</legend>
+        <div id="contact-container">
+          <img
+            src="images/github-mark-white.png"
+            alt="GitHub icon"
+            class="company-icon"
+            id="github"
+          />
+          <a href="https://github.com/dal-liu" class="contact-text" id="github">
+            GitHub
+          </a>
+          <img
+            src="images/In-White-128@2x.png"
+            alt="LinkedIn icon"
+            class="company-icon"
+            id="linkedin"
+          />
+          <a
+            href="https://www.linkedin.com/in/daniel-a-liu/"
+            class="contact-text"
+            id="linkedin"
+          >
+            LinkedIn
+          </a>
+          <img
+            src="images/file-earmark-text.svg"
+            alt="File icon"
+            class="icon"
+            id="resume"
+          />
+          <a
+            href="https://danielliu.dev/assets/Daniel_Liu_resume.pdf"
+            class="contact-text"
+            id="resume"
+          >
+            Résumé (PDF)
+          </a>
+        </div>
+        <fieldset class="sub-item">
+          <legend class="item-label" id="education-label">Education</legend>
+          <div id="education-container">
+            <div class="dot-container" id="item1">
+              <span class="dot-outline">
+                <span class="dot" id="education-dot"></span>
+              </span>
+              <span class="dot-link"></span>
+            </div>
+            <div class="list-item-content" id="item1">
+              <span class="name">Northwestern University</span>
+              <span class="location">Evanston, IL</span>
+              <span class="degree">B.S. Computer Science</span>
+              <span class="date">Sep. 2022 - Jun. 2025</span>
+            </div>
+            <div class="dot-container" id="item2">
+              <span class="dot-outline">
+                <span class="dot" id="education-dot"></span>
+              </span>
+            </div>
+            <div class="list-item-content" id="item2">
+              <span class="name">University of Wisconsin-Madison</span>
+              <span class="location">Madison, WI</span>
+              <span class="date">Sep. 2021 - May 2022</span>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="sub-item">
+          <legend class="item-label" id="skills-label">Skills</legend>
+          <span>
+            <span class="skill-category">Programming Languages:</span>
+            C++, Python, JavaScript, HTML/CSS, Java, TypeScript, C
+          </span>
+          <span>
+            <span class="skill-category">Frameworks/Libraries:</span>
+            React, Node.js, Express, Vue.js, Flask, LLVM, React Native
+          </span>
+          <span>
+            <span class="skill-category">Developer Tools:</span>
+            Git, VS Code, Vim, IntelliJ, PyCharm, Linux
+          </span>
+        </fieldset>
+      </fieldset>
+      <fieldset class="grid-item" id="about-me">
+        <legend class="item-label" id="about-me-label">About Me</legend>
+        <span>
+          I'm a third-year student majoring in computer science at Northwestern
+          University in Evanston, Illinois. I'm passionate about software
+          engineering, compilers, and operating systems.
+        </span>
+        <span>
+          Besides being a computer science student, I'm also an aspiring sub-5
+          minute miler, an avid music listener, a sitcom binge-watcher, and a
+          college sports fan.
+        </span>
+      </fieldset>
+      <fieldset class="grid-item" id="experience">
+        <legend class="item-label" id="experience-label">Experience</legend>
+        <div id="experience-container">
           <div class="dot-container" id="item1">
             <span class="dot-outline">
-              <span class="dot" id="education-dot"></span>
+              <span class="dot" id="experience-dot"></span>
             </span>
-            <span class="dot-link"></span>
+            <span class="dot-elbow" id="item1"></span>
           </div>
           <div class="list-item-content" id="item1">
-            <span class="name">Northwestern University</span>
+            <span class="name">Undergraduate Teaching Assistant</span>
+            <span class="company">Northwestern University</span>
             <span class="location">Evanston, IL</span>
-            <span class="degree">B.S. Computer Science</span>
-            <span class="date">Sep. 2022 - June 2025</span>
-          </div>
-          <div class="dot-container" id="item2">
-            <span class="dot-outline">
-              <span class="dot" id="education-dot"></span>
+            <span class="date">Sep. 2023 - Dec. 2023</span>
+            <span class="description">
+              I was an undergraduate teaching assistant for 200+ students in CS
+              348: Intro to Artificial Intelligence. I held weekly office hours
+              where I helped students with their Python programming assignments.
             </span>
           </div>
-          <div class="list-item-content" id="item2">
-            <span class="name">University of Wisconsin-Madison</span>
-            <span class="location">Madison, WI</span>
-            <span class="date">Sep. 2021 - May 2022</span>
-          </div>
         </div>
       </fieldset>
-      <fieldset class="sub-item">
-        <legend class="item-label" id="skills-label">Skills</legend>
-        <span>
-          <span class="skill-category">Programming Languages:</span>
-          Python, C++, JavaScript, HTML/CSS, TypeScript, Java, C, R, MATLAB, SQL
-        </span>
-        <span>
-          <span class="skill-category">Frameworks/Libraries:</span>
-          React, Node.js, Express, LLVM, Vue.js, Flask, React Native, Selenium
-        </span>
-        <span>
-          <span class="skill-category">Developer Tools:</span>
-          Git, VS Code, Vim, IntelliJ IDEA, Linux
-        </span>
-      </fieldset>
-    </fieldset>
-    <fieldset class="grid-item" id="about-me">
-      <legend class="item-label" id="about-me-label">About Me</legend>
-      <span>
-        I'm a third-year student majoring in computer science at Northwestern University in Evanston, Illinois. Some of
-        my interests include compilers, operating systems, and computer graphics.
-      </span>
-      <span>When I'm not coding, you can find me training for a sub-5 minute mile, listening to
-        music, or watching various sitcoms and sports.</span>
-    </fieldset>
-    <fieldset class="grid-item" id="experience">
-      <legend class="item-label" id="experience-label">Experience</legend>
-      <div id="experience-container">
-        <div class="dot-container" id="item1">
-          <span class="dot-outline">
-            <span class="dot" id="experience-dot"></span>
-          </span>
-          <span class="dot-elbow" id="item1"></span>
-        </div>
-        <div class="list-item-content" id="item1">
-          <span class="name">Undergraduate Teaching Assistant</span>
-          <span class="company">Northwestern University</span>
-          <span class="location">Evanston, IL</span>
-          <span class="date">Sep. 2023 - Dec. 2023</span>
-          <span class="description">
-            I was an undergraduate teaching assistant for 200+ students in CS 348:
-            Intro to Artificial Intelligence. I held weekly office hours where I helped students with their Python
-            programming assignments.
-          </span>
-        </div>
-      </div>
-    </fieldset>
-  </div>
+    </div>
 
-  <!--------------------------------------------------------------------------------------------->
+    <!--------------------------------------------------------------------------------------------->
 
-  <div class="projects-page" id="projects">
-    <span id="title">Projects</span>
-    <span>Coming soon™</span>
-  </div>
+    <div class="projects-page" id="projects">
+      <span id="title">Projects</span>
+      <span>Coming soon™</span>
+    </div>
 
-  <!--------------------------------------------------------------------------------------------->
+    <!--------------------------------------------------------------------------------------------->
 
-  <div class="footer">
-    <span id="footer-text">Made with &#10084; by Daniel Liu</span>
-  </div>
+    <div class="footer">
+      <span id="footer-text">Made with &#10084; by Daniel Liu</span>
+    </div>
 
-  <script src="scripts/script.js"></script>
-</body>
-
+    <script src="scripts/script.js"></script>
+  </body>
 </html>
