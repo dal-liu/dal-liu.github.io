@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   background-color: var(--bg);
   color: var(--fg);
   font-size: 1.1rem;
@@ -26,16 +26,16 @@ body {
   padding: 0;
 }
 
-a:link {
+.contact-link:link {
   color: var(--yellow);
   transition: 0.3s;
 }
 
-a:visited {
+.contact-link:visited {
   color: var(--yellow);
 }
 
-a:hover {
+.contact-link:hover {
   color: white;
 }
 
@@ -139,10 +139,6 @@ a:hover {
   #contact {
     grid-area: 2 / 2 / 4 / 3;
 
-    .skill-category {
-      color: var(--green);
-    }
-
     #contact-label {
       color: var(--yellow);
     }
@@ -209,7 +205,8 @@ a:hover {
 }
 
 .arrow-down {
-  filter: invert(93%) sepia(18%) saturate(4426%) hue-rotate(156deg) brightness(83%) contrast(81%);
+  filter: invert(93%) sepia(18%) saturate(4426%) hue-rotate(156deg)
+    brightness(83%) contrast(81%);
   width: 5rem;
   animation: moveUpDown 2s ease-in-out infinite;
   transition: 0.3s;
@@ -217,7 +214,8 @@ a:hover {
 }
 
 .arrow-down:hover {
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%)
+    contrast(100%);
   cursor: pointer;
 }
 
@@ -301,12 +299,14 @@ a:hover {
   gap: 0.5rem;
 
   .icon {
-    filter: brightness(0) saturate(100%) invert(83%) sepia(34%) saturate(552%) hue-rotate(343deg) brightness(93%) contrast(93%);
+    filter: brightness(0) saturate(100%) invert(83%) sepia(34%) saturate(552%)
+      hue-rotate(343deg) brightness(93%) contrast(93%);
     height: 1rem;
     grid-column: 1 / 2;
   }
 
-  .contact-text {
+  .contact-text,
+  .contact-link {
     grid-column: 2 / 3;
     width: max-content;
   }
@@ -332,7 +332,8 @@ a:hover {
     color: var(--purple);
   }
 
-  .location, .date {
+  .location,
+  .date {
     font-weight: 300;
     font-style: italic;
   }
@@ -352,26 +353,37 @@ a:hover {
     color: var(--blue);
   }
 
-  .location, .date {
+  .location,
+  .date {
     font-weight: 300;
     font-style: italic;
   }
 }
 
-#item1 {
+#skill-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+
+  .skill-category {
+    color: var(--green);
+  }
+}
+
+.item1 {
   grid-row: 1 / 2;
 }
 
-#item2 {
+.item2 {
   grid-row: 2 / 3;
 }
 
-#item3 {
+.item3 {
   grid-row: 3 / 4;
 }
 
 @keyframes moveUpDown {
-
   0%,
   100% {
     transform: translateY(0);
@@ -404,7 +416,7 @@ a:hover {
     justify-content: space-evenly;
 
     .nav-item-container {
-      margin: 0
+      margin: 0;
     }
 
     .nav-item {

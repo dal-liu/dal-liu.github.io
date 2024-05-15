@@ -1,22 +1,22 @@
-var navbar = document.querySelector('.navbar');
-var aboutPage = document.querySelector('#about');
-var projectsPage = document.querySelector('#projects');
+var navbar = document.querySelector(".navbar");
+var aboutPage = document.querySelector("#about");
+var projectsPage = document.querySelector("#projects");
 
-document.querySelectorAll('.nav-item').forEach((item) => {
-  item.addEventListener('click', (e) => {
+document.querySelectorAll(".nav-item").forEach((item) => {
+  item.addEventListener("click", (e) => {
     e.preventDefault();
 
     switch (item.id) {
-      case 'nav-home':
+      case "nav-home":
         var top = 0;
         break;
-      case 'nav-about':
+      case "nav-about":
         if (!aboutPage) {
           return;
         }
         var top = aboutPage.offsetTop - 50;
         break;
-      case 'nav-projects':
+      case "nav-projects":
         if (!projectsPage) {
           return;
         }
@@ -28,13 +28,12 @@ document.querySelectorAll('.nav-item').forEach((item) => {
 
     window.scrollTo({
       top,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
-    console.log('clicked');
   });
 });
 
-document.querySelector('.arrow-down').addEventListener('click', (e) => {
+document.querySelector(".arrow-down").addEventListener("click", (e) => {
   e.preventDefault();
 
   if (!aboutPage) {
@@ -43,7 +42,7 @@ document.querySelector('.arrow-down').addEventListener('click', (e) => {
 
   window.scrollTo({
     top: aboutPage.offsetTop - 50,
-    behavior: 'smooth',
+    behavior: "smooth",
   });
 });
 
@@ -53,8 +52,8 @@ window.onscroll = () => {
   }
 
   if (window.scrollY > 0) {
-    navbar.classList.add('sticky');
+    navbar.classList.add("sticky");
   } else {
-    navbar.classList.remove('sticky');
+    navbar.classList.remove("sticky");
   }
 };
