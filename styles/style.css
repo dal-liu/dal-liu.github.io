@@ -324,7 +324,7 @@ body {
   gap: 0.5rem 1rem;
   align-content: space-evenly;
 
-  #education-dot {
+  .education-dot {
     background-color: var(--purple);
   }
 
@@ -345,7 +345,7 @@ body {
   grid-template-rows: repeat(1, auto);
   gap: 0.5rem 1rem;
 
-  #experience-dot {
+  .experience-dot {
     background-color: var(--blue);
   }
 
