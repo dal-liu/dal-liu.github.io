@@ -1,7 +1,6 @@
 var navbar = document.querySelector(".navbar");
 var aboutPage = document.querySelector("#about");
 var projectsPage = document.querySelector("#projects");
-var email = document.querySelector("#email");
 
 document.querySelectorAll(".nav-item").forEach((item) => {
   item.addEventListener("click", (e) => {
@@ -59,10 +58,10 @@ window.onscroll = () => {
   }
 };
 
-email.addEventListener("mouseenter", () => {
-  email.href = atob("bWFpbHRvOmRhbmllbC1hLWxpdUBvdXRsb29rLmNvbQ==");
-});
+var decoded = atob("ZGFuaWVsLWEtbGl1QG91dGxvb2suY29t");
+var email = document.querySelector("#email");
 
-email.addEventListener("mouseleave", () => {
-  email.href = "javascript:void(0)";
-});
+window.onload = () => {
+  email.innerHTML = decoded;
+  email.href = "mailto:" + decoded;
+};
