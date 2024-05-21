@@ -1,6 +1,7 @@
 var navbar = document.querySelector(".navbar");
 var aboutPage = document.querySelector("#about");
 var projectsPage = document.querySelector("#projects");
+var email = document.querySelector("#email");
 
 document.querySelectorAll(".nav-item").forEach((item) => {
   item.addEventListener("click", (e) => {
@@ -57,3 +58,11 @@ window.onscroll = () => {
     navbar.classList.remove("sticky");
   }
 };
+
+email.addEventListener("mouseenter", () => {
+  email.href = atob("bWFpbHRvOmRhbmllbC1hLWxpdUBvdXRsb29rLmNvbQ==");
+});
+
+email.addEventListener("mouseleave", () => {
+  email.href = "javascript:void(0)";
+});
