@@ -58,10 +58,10 @@ window.onscroll = () => {
   }
 };
 
-var decoded = atob("ZGFuaWVsLWEtbGl1QG91dGxvb2suY29t");
-var email = document.querySelector("#email");
+var email = atob("ZGFuaWVsLWEtbGl1QG91dGxvb2suY29t");
+var emailLink = document.querySelector("#email-link");
 
 window.onload = () => {
-  email.innerHTML = decoded;
-  email.href = "mailto:" + decoded;
+  emailLink.innerHTML = email;
+  emailLink.href = "mailto:" + email;
 };
