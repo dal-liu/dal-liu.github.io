@@ -22,8 +22,8 @@
 
     <!--------------------------------------------------------------------------------------------->
 
-    <div class="home-page" id="home">
-      <div class="home-container">
+    <div id="home">
+      <div id="home-container">
         <span id="hello">Hi there!</span>
         <span id="greeting">
           I'm
@@ -39,7 +39,7 @@
         </span>
       </div>
       <img
-        src="images/chevron-double-down.svg"
+        src="assets/chevron-double-down.svg"
         alt="Arrow pointing down icon"
         class="arrow-down"
       />
@@ -47,39 +47,52 @@
 
     <!--------------------------------------------------------------------------------------------->
 
-    <div class="about-page" id="about">
+    <div id="about">
       <fieldset class="grid-item" id="contact">
         <legend class="item-label" id="contact-label">Contact</legend>
         <div id="contact-container">
-          <img src="images/envelope.svg" alt="Email icon" class="icon" />
-          <a href="javascript:void(0)" class="contact-link" id="email">
+          <img src="assets/envelope.svg" alt="Email icon" class="icon" />
+          <a
+            href="javascript:void(0)"
+            class="contact-link"
+            target="_blank"
+            id="email"
+          >
             daniel-a-liu at outlook dot com
           </a>
           <img
-            src="images/github-mark-white.png"
+            src="assets/github-mark-white.png"
             alt="GitHub icon"
             class="icon"
           />
-          <a href="https://github.com/dal-liu" class="contact-link"> GitHub </a>
+          <a
+            href="https://github.com/dal-liu"
+            class="contact-link"
+            target="_blank"
+          >
+            GitHub
+          </a>
           <img
-            src="images/In-White-128@2x.png"
+            src="assets/In-White-128@2x.png"
             alt="LinkedIn icon"
             class="icon"
           />
           <a
             href="https://www.linkedin.com/in/daniel-a-liu/"
             class="contact-link"
+            target="_blank"
           >
             LinkedIn
           </a>
           <img
-            src="images/file-earmark-text.svg"
+            src="assets/file-earmark-text.svg"
             alt="File icon"
             class="icon"
           />
           <a
             href="https://danielliu.dev/assets/Daniel_Liu_resume.pdf"
             class="contact-link"
+            target="_blank"
           >
             Résumé (PDF)
           </a>
@@ -98,8 +111,8 @@
             </div>
             <div class="list-item-content item1">
               <span class="name">Northwestern University</span>
-              <span class="degree">B.S. Computer Science</span>
               <span class="location">Evanston, IL</span>
+              <span class="degree">B.S. Computer Science</span>
               <span class="date">Sep. 2022 - Jun. 2025</span>
             </div>
             <div class="dot-container item2">
@@ -119,7 +132,7 @@
 
         <fieldset class="sub-item">
           <legend class="item-label" id="skills-label">Skills</legend>
-          <div id="skill-container">
+          <div id="skills-container">
             <span>
               <span class="skill-category">Programming Languages:</span>
               C++, Python, JavaScript, HTML, CSS, Go, SQL, Java, TypeScript, C,
@@ -127,11 +140,12 @@
             </span>
             <span>
               <span class="skill-category">Frameworks/Libraries:</span>
-              React, Node.js, Express, Vue.js, Flask, LLVM, React Native
+              React, Node.js, Express, Vue.js, Ruby on Rails, Flask, LLVM, React
+              Native
             </span>
             <span>
               <span class="skill-category">Developer Tools:</span>
-              Git, Neovim, Vim, VS Code, IntelliJ, Linux, MongoDB, MySQL
+              Git, Neovim, Vim, VS Code, IntelliJ, Linux, MongoDB
             </span>
           </div>
         </fieldset>
@@ -150,7 +164,7 @@
         <span>
           Besides being a computer science student, I'm also an aspiring sub-5
           minute miler, a sitcom binge-watcher, and a fan of tennis, track and
-          field, as well as college football and basketball.
+          field, and college football and basketball.
         </span>
       </fieldset>
 
@@ -163,24 +177,28 @@
             <span class="dot-outline">
               <span class="dot experience-dot"></span>
             </span>
-            <span class="dot-link item1"></span>
+            <span class="dot-link"></span>
           </div>
           <div class="list-item-content item1">
             <span class="name">Software Engineer Intern</span>
-            <span class="company">CDK Global</span>
-            <span class="location">Hoffman Estates, IL</span>
+            <span class="company"
+              >CDK Global&nbsp;&nbsp;|&nbsp;&nbsp;Hoffman Estates, IL</span
+            >
             <span class="date">Jun. 2024 - Present</span>
           </div>
           <div class="dot-container item2">
             <span class="dot-outline">
               <span class="dot experience-dot"></span>
             </span>
-            <span class="dot-elbow item2"></span>
+            <span class="dot-elbow-vertical experience-elbow"></span>
+            <span class="dot-elbow-horizontal"></span>
           </div>
           <div class="list-item-content item2">
             <span class="name">Undergraduate Teaching Assistant</span>
-            <span class="company">Northwestern University</span>
-            <span class="location">Evanston, IL</span>
+            <span class="company"
+              >Northwestern University&nbsp;&nbsp;|&nbsp;&nbsp;Evanston,
+              IL</span
+            >
             <span class="date">Sep. 2023 - Dec. 2023</span>
             <span class="description">
               I was an undergraduate teaching assistant for 200+ students in CS
@@ -194,9 +212,46 @@
 
     <!--------------------------------------------------------------------------------------------->
 
-    <div class="projects-page" id="projects">
+    <div id="projects">
       <span id="title">Projects</span>
-      <span>Coming soon™</span>
+      <span id="subtitle">Some things I've worked on</span>
+      <div class="projects-container">
+        <div class="projects-column" id="column1">
+          <div class="project-item">
+            <img
+              src="assets/Screenshot 2024-06-19 at 7.07.21 PM.png"
+              alt="Screenshot of compiler competition results"
+              class="project-image"
+            />
+            <span class="project-title">Almost-C Compiler</span>
+            <span class="project-description">
+              A compiler that translates a C-like language into x86-64 assembly
+              code, built from scratch. Uses advanced compiler techniques such
+              as register allocation, instruction selection, and compiler
+              optimizations such as constant propagation and dead-code
+              elimination.
+            </span>
+          </div>
+        </div>
+        <div class="projects-column" id="column2">
+          <a
+            href="https://github.com/dal-liu/strava-weather-service"
+            target="_blank"
+            class="project-item clickable"
+          >
+            <img
+              src="assets/1000001703.png"
+              alt="Screenshot of Strava"
+              class="project-image"
+            />
+            <span class="project-title">Strava Weather Service</span>
+            <span class="project-description">
+              Automatically fetches weather data and adds it to new outdoor
+              Strava activities.
+            </span>
+          </a>
+        </div>
+      </div>
     </div>
 
     <!--------------------------------------------------------------------------------------------->
