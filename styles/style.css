@@ -390,37 +390,42 @@ body {
   .projects-container {
     display: grid;
     grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
-    gap: 1rem;
+    gap: 2rem;
 
-    .project-item {
+    .projects-column {
       display: flex;
       flex-direction: column;
-      border-radius: 1rem;
-      background: var(--bg2);
-      text-decoration: none;
-      transition: 0.25s linear;
-      margin-bottom: 1rem;
-      box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+      gap: 2rem;
 
-      .project-image {
-        border-radius: 1rem 1rem 0 0;
-        width: 100%;
-      }
-
-      .project-text {
-        margin: 0.75rem 1rem 1rem 1rem;
+      .project-item {
         display: flex;
         flex-direction: column;
-        gap: 0.25rem;
+        border-radius: 1rem;
+        background: var(--bg2);
+        text-decoration: none;
+        transition: 0.25s linear;
+        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
 
-        .project-title {
-          color: var(--orange);
-          font-weight: bold;
-          font-size: 1.1rem;
+        .project-image {
+          border-radius: 1rem 1rem 0 0;
+          width: 100%;
         }
 
-        .project-description {
-          color: var(--fg);
+        .project-text {
+          margin: 0.75rem 1rem 1rem 1rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.25rem;
+
+          .project-title {
+            color: var(--orange);
+            font-weight: bold;
+            font-size: 1.1rem;
+          }
+
+          .project-description {
+            color: var(--fg);
+          }
         }
       }
     }
@@ -503,26 +508,26 @@ body {
 
   #home {
     grid-template-rows: 2fr auto 0.75fr 1.25fr;
-  }
 
-  #home #home-container {
-    width: 80vw;
+    #home-container {
+      width: 80vw;
 
-    #hello {
-      font-size: 3rem;
+      #hello {
+        font-size: 3rem;
+      }
+
+      #greeting {
+        font-size: 4rem;
+      }
+
+      #description {
+        font-size: 1.5rem;
+      }
     }
 
-    #greeting {
-      font-size: 4rem;
+    .arrow-down {
+      width: 3.5rem;
     }
-
-    #description {
-      font-size: 1.5rem;
-    }
-  }
-
-  #home .arrow-down {
-    width: 3.5rem;
   }
 
   #about {
@@ -537,18 +542,24 @@ body {
     }
   }
 
-  #projects .projects-container {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
+  #projects {
+    .projects-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
 
-  #projects #title {
-    font-size: 3rem;
-    margin-top: 2rem;
-  }
+      .projects-column {
+        gap: 0;
+      }
+    }
 
-  #projects .project-item {
-    margin: 0 2vw;
+    .project-item {
+      margin: 0 2vw 1rem 2vw;
+    }
+
+    #title {
+      font-size: 3rem;
+      margin-top: 2rem;
+    }
   }
 }
