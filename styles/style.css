@@ -408,7 +408,7 @@ body {
       }
 
       .project-text {
-        margin: 1rem;
+        margin: 0.75rem 1rem 1rem 1rem;
         display: flex;
         flex-direction: column;
         gap: 0.25rem;
