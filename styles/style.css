@@ -389,12 +389,12 @@ body {
   .projects-container {
     display: grid;
     grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
-    gap: 2rem;
+    gap: 1.5rem;
 
     .projects-column {
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 1.5rem;
 
       .project-item {
         display: flex;
@@ -419,7 +419,7 @@ body {
           .project-title {
             color: var(--orange);
             font-weight: bold;
-            font-size: 1.1rem;
+            font-size: 1.25rem;
           }
 
           .project-description {
@@ -452,7 +452,7 @@ body {
 
   #subtitle {
     margin-bottom: 1rem;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
   }
 }
 
