@@ -188,6 +188,10 @@ body {
   font-size: 0.9rem;
   color: var(--fg2);
   background-color: var(--bg3);
+
+  #footer-text:visited {
+    color: var(--fg2);
+  }
 }
 
 #home {
