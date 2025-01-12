@@ -281,8 +281,8 @@ body {
       .contact-link {
         grid-column: 2 / 3;
         width: max-content;
-        text-decoration: none;
         color: var(--yellow);
+        text-decoration: none;
       }
 
       .company-icon {
