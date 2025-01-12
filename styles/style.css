@@ -260,19 +260,6 @@ body {
   #contact {
     grid-area: 2 / 2 / 4 / 3;
 
-    .contact-link:link {
-      color: var(--yellow);
-      transition: 0.25s linear;
-    }
-
-    .contact-link:visited {
-      color: var(--yellow);
-    }
-
-    .contact-link:hover {
-      color: white;
-    }
-
     #contact-label {
       color: var(--yellow);
     }
@@ -295,11 +282,25 @@ body {
         grid-column: 2 / 3;
         width: max-content;
         text-decoration: none;
+        color: var(--yellow);
       }
 
       .company-icon {
         height: 1rem;
         grid-column: 1 / 2;
+      }
+
+      .contact-link:link {
+        color: var(--yellow);
+        transition: 0.25s linear;
+      }
+
+      .contact-link:visited {
+        color: var(--yellow);
+      }
+
+      .contact-link:hover {
+        color: white;
       }
     }
 
@@ -450,7 +451,7 @@ body {
 
     .clickable:hover {
       background: var(--bg4);
-      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
     }
   }
 

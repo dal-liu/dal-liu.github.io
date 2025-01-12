@@ -57,9 +57,7 @@
             class="icon"
             id="email-icon"
           />
-          <a href="javascript:void(0)" class="contact-link" id="email-link">
-            daniel-a-liu at outlook dot com
-          </a>
+          <span class="contact-text"> daniel-a-liu at outlook dot com </span>
           <img
             src="images/github-mark-white.png"
             alt="GitHub icon"
@@ -143,7 +141,7 @@
             </span>
             <span>
               <span class="skill-category">Frameworks/Libraries:</span>
-              React, Vue.js, Node.js, Express, Ruby on Rails, LLVM, React Native
+              LLVM, React, Vue.js, Ruby on Rails, Node.js, Express, React Native
             </span>
             <span>
               <span class="skill-category">Developer Tools:</span>
@@ -160,9 +158,7 @@
         <span>
           I'm a fourth-year student at Northwestern University pursuing a
           bachelor's degree in computer science. I'm particularly interested in
-          compilers and programming languages. After graduating from
-          Northwestern, I'll be joining MathWorks in Natick, MA as an Associate
-          EDG Engineer.
+          compilers and programming languages.
         </span>
         <span>
           Outside of programming, I'm an avid runner aspiring to run a sub-5
@@ -205,7 +201,7 @@
       <span id="subtitle">Some things I've worked on</span>
       <div class="projects-container">
         <div class="projects-column column1">
-          <div class="project-item tooltip">
+          <div class="project-item">
             <img
               src="images/322-competition.png"
               alt="Screenshot of compiler competition results"
@@ -245,6 +241,22 @@
           </a>
         </div>
         <div class="projects-column column2">
+          <div class="project-item">
+            <img
+              src="images/cat-llvm-pass.png"
+              alt="Screenshot of output with and without CAT LLVM pass"
+              class="project-image"
+            />
+            <div class="project-text">
+              <span class="project-title">CAT LLVM Pass</span>
+              <span class="project-description">
+                An LLVM pass written in C++ that optimizes programs that use the
+                CAT language. Reduces execution cost by eliminating CAT API
+                calls via constant optimizations, function inlining, and loop
+                peeling.
+              </span>
+            </div>
+          </div>
           <a
             href="https://github.com/dal-liu/strava-wx"
             class="project-item clickable"

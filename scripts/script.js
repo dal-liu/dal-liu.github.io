@@ -57,11 +57,3 @@ window.onscroll = () => {
     navbar.classList.remove("sticky");
   }
 };
-
-var email = atob("ZGFuaWVsLWEtbGl1QG91dGxvb2suY29t");
-var emailLink = document.querySelector("#email-link");
-
-window.onload = () => {
-  emailLink.innerHTML = email;
-  emailLink.href = "mailto:" + email;
-};
