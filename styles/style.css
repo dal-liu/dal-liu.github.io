@@ -401,7 +401,7 @@ body {
   .projects-container {
     display: grid;
     grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
-    gap: 1.5rem;
+    gap: 1.25rem;
 
     .projects-column {
       display: flex;
@@ -431,7 +431,6 @@ body {
           .project-title {
             color: var(--orange);
             font-weight: bold;
-            font-size: 1.25rem;
           }
 
           .project-description {
@@ -464,7 +463,7 @@ body {
 
   #subtitle {
     margin-bottom: 1rem;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
 }
 
