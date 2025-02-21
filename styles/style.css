@@ -2,11 +2,12 @@
 
 :root {
   --bg: #282c34;
-  --bg2: #2d313b;
-  --bg3: #22262d;
-  --bg4: #3d4350;
+  --bg2: #2c313a;
+  --bg3: #21252b;
+  --bg4: #323842;
   --fg: #abb2bf;
-  --fg2: #5c6370;
+  --fg2: #495162;
+  --fg3: #5c6370;
   --red: #e06c75;
   --orange: #d19a66;
   --yellow: #e5c07b;
@@ -37,7 +38,7 @@ body {
   z-index: 1000;
   align-items: center;
   font-size: 0.9rem;
-  color: var(--fg2);
+  color: var(--fg3);
 
   .nav-item {
     padding: 0 1rem 0 1rem;
@@ -186,15 +187,20 @@ body {
   align-items: center;
   height: 50px;
   font-size: 0.9rem;
-  color: var(--fg2);
+  color: var(--fg3);
   background-color: var(--bg3);
 
   #footer-text:link {
-    color: var(--fg2);
+    color: var(--fg3);
+    transition: 0.25s linear;
   }
 
   #footer-text:visited {
-    color: var(--fg2);
+    color: var(--fg3);
+  }
+
+  #footer-text:hover {
+    color: white;
   }
 }
 
@@ -233,16 +239,16 @@ body {
       font-size: 2rem;
       line-height: 1.25;
 
-      #currently {
+      #adverb {
         color: var(--red);
       }
 
-      #major {
+      #role {
         color: var(--blue);
         font-weight: bold;
       }
 
-      #university {
+      #place {
         color: var(--purple);
         font-weight: bold;
       }
@@ -350,6 +356,20 @@ body {
 
     #about-me-label {
       color: var(--red);
+    }
+
+    .about-me-link:link {
+      color: var(--red);
+      text-decoration: none;
+      transition: 0.25s linear;
+    }
+
+    .about-me-link:visited {
+      color: var(--red);
+    }
+
+    .about-me-link:hover {
+      color: white;
     }
   }
 
