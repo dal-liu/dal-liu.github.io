@@ -119,6 +119,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  grid-column: 1 / 2;
 
   .dot-outline {
     border: 1px solid var(--fg2);
@@ -263,6 +264,28 @@ body {
   grid-template-rows: 1rem 0.5fr 2fr 0.5fr;
   gap: 0.5rem 1rem;
 
+  #about-me {
+    grid-area: 2 / 3 / 3 / 4;
+
+    #about-me-label {
+      color: var(--red);
+    }
+
+    .about-me-link:link {
+      color: var(--red);
+      text-decoration: none;
+      transition: 0.25s linear;
+    }
+
+    .about-me-link:visited {
+      color: var(--red);
+    }
+
+    .about-me-link:hover {
+      color: white;
+    }
+  }
+
   #contact {
     grid-area: 2 / 2 / 4 / 3;
 
@@ -281,6 +304,7 @@ body {
           saturate(552%) hue-rotate(343deg) brightness(93%) contrast(93%);
         height: 1rem;
         grid-column: 1 / 2;
+        justify-self: center;
       }
 
       .contact-text,
@@ -315,10 +339,8 @@ body {
     }
 
     #education-container {
-      display: grid;
-      grid-template-columns: 1.5rem auto;
-      grid-template-rows: repeat(3, auto);
-      gap: 0.5rem 1rem;
+      display: flex;
+      flex-direction: column;
       align-content: space-evenly;
 
       .education-dot {
@@ -327,11 +349,6 @@ body {
 
       .name {
         color: var(--purple);
-      }
-
-      .date {
-        font-weight: 300;
-        font-style: italic;
       }
     }
 
@@ -348,28 +365,6 @@ body {
       .skill-category {
         color: var(--green);
       }
-    }
-  }
-
-  #about-me {
-    grid-area: 2 / 3 / 3 / 4;
-
-    #about-me-label {
-      color: var(--red);
-    }
-
-    .about-me-link:link {
-      color: var(--red);
-      text-decoration: none;
-      transition: 0.25s linear;
-    }
-
-    .about-me-link:visited {
-      color: var(--red);
-    }
-
-    .about-me-link:hover {
-      color: white;
     }
   }
 
