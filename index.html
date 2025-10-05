@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Daniel Liu</title>
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -37,7 +37,7 @@
         </span>
       </div>
       <img
-        src="images/chevron-double-down.svg"
+        src="icons/chevron-double-down.svg"
         alt="Arrow pointing down icon"
         class="arrow-down"
       />
@@ -65,7 +65,7 @@
         <legend class="item-label" id="contact-label">Contact</legend>
         <div id="contact-container">
           <img
-            src="images/envelope.svg"
+            src="icons/envelope.svg"
             alt="Email icon"
             class="icon"
             id="email-icon"
@@ -122,11 +122,11 @@
           <div id="skills-container">
             <span class="entry">
               <span class="category">Programming Languages:</span>
-              <span><span class="bullet">•</span> C++, Go, Rust, Zig</span>
+              <span>C++, Go, Rust, Zig</span>
             </span>
             <span class="entry">
               <span class="category">Frameworks/Libraries:</span>
-              <span><span class="bullet">•</span> LLVM, MLIR</span>
+              <span>LLVM, MLIR</span>
             </span>
           </div>
         </fieldset>
@@ -194,8 +194,7 @@
                 generates Intel x86-64 assembly code, built from scratch in C++.
                 Implements graph coloring register allocation, abstract syntax
                 tree instruction selection, and optimizations including constant
-                propagation and dead-code elimination. Achieved 3rd place out of
-                18 participants in the final compiler performance competition.
+                propagation and dead-code elimination.
               </span>
             </div>
           </div>
@@ -211,7 +210,7 @@
                 An LLVM pass written in C++ that optimizes programs that use a
                 toy language that supports basic arithmetic operations.
                 Efficiently performs reaching definition and liveness analyses
-                to eliminate operations. Reduced execution cost by 36% through
+                to eliminate unnecessary operations. Reduced execution cost with
                 optimizations such as constant folding, dead-code elimination,
                 function inlining, and loop unrolling.
               </span>
@@ -268,6 +267,6 @@
       >
     </div>
 
-    <script src="scripts/script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

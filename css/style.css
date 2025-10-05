@@ -368,10 +368,6 @@ body {
         .category {
           color: var(--green);
         }
-
-        .bullet {
-          color: var(--green);
-        }
       }
     }
   }
