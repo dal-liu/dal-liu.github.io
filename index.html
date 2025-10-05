@@ -50,12 +50,12 @@
         <legend class="item-label" id="about-me-label">About Me</legend>
         <span>
           I recently graduated from Northwestern University with a bachelor's
-          degree in computer science. I love working on personal and open source
-          programming projects, as well as wasting time tinkering with my
+          degree in computer science. I enjoy working on personal projects and
+          making open source contributions, as well as wasting time tinkering
+          with my
           <a href="https://github.com/dal-liu/dotfiles" class="about-me-link"
-            >configs.</a
-          >
-          When I'm not coding, you'll likely find me on a run.
+            >configs</a
+          >. When I'm not coding, you'll likely find me on a run.
         </span>
       </fieldset>
 
@@ -74,7 +74,7 @@
           <img
             src="images/github-mark-white.png"
             alt="GitHub icon"
-            class="icon"
+            class="icon icon-filtered"
             id="github-icon"
           />
           <a
@@ -87,7 +87,7 @@
           <img
             src="images/In-White-128@2x.png"
             alt="LinkedIn icon"
-            class="icon"
+            class="icon icon-filtered"
             id="linkedin-icon"
           />
           <a
@@ -104,10 +104,13 @@
         <fieldset class="sub-item">
           <legend class="item-label" id="education-label">Education</legend>
           <div id="education-container">
-            <div class="list-item-content item1">
+            <div class="entry">
               <span class="name">Northwestern University</span>
               <span class="location">Evanston, IL</span>
               <span class="degree">B.S. Computer Science, 2025</span>
+              <span class="description"
+                >Concentration in Software Engineering & Programming Languages
+              </span>
             </div>
           </div>
         </fieldset>
@@ -117,9 +120,13 @@
         <fieldset class="sub-item">
           <legend class="item-label" id="skills-label">Skills</legend>
           <div id="skills-container">
-            <span>
-              <span class="skill-category">Programming Languages:</span>
-              C++, Go, Rust, Zig
+            <span class="entry">
+              <span class="category">Programming Languages:</span>
+              <span><span class="bullet">•</span> C++, Go, Rust, Zig</span>
+            </span>
+            <span class="entry">
+              <span class="category">Frameworks/Libraries:</span>
+              <span><span class="bullet">•</span> LLVM, MLIR</span>
             </span>
           </div>
         </fieldset>
@@ -130,50 +137,38 @@
       <fieldset class="grid-item" id="experience">
         <legend class="item-label" id="experience-label">Experience</legend>
         <div id="experience-container">
-          <div class="dot-container item1">
-            <span class="dot-outline">
-              <span class="dot experience-dot"></span>
-            </span>
-            <span class="dot-elbow-vertical experience-elbow"></span>
-            <span class="dot-elbow-horizontal"></span>
-          </div>
-          <div class="list-item-content item1">
-            <span class="name">Associate Software Engineer</span>
-            <span class="company"
-              >MathWorks&nbsp;&nbsp;|&nbsp;&nbsp;Natick, MA</span
-            >
-            <span class="date">May 2025 &ndash; Present</span>
+          <div class="list-item-container">
+            <div class="dot-container experience-dot-container">
+              <span class="dot-outline">
+                <span class="dot experience-dot"></span>
+              </span>
+              <span class="dot-elbow-vertical"></span>
+              <span class="dot-elbow-horizontal"></span>
+            </div>
+            <div class="entry-container">
+              <span class="name">Associate Engineer</span>
+              <span class="company"
+                >MathWorks&nbsp;&nbsp;|&nbsp;&nbsp;Natick, MA</span
+              >
+              <span class="date">May 2025 &ndash; Present</span>
+            </div>
             <span class="description">EDG</span>
           </div>
-          <div class="dot-container item2">
-            <span class="dot-outline">
-              <span class="dot experience-dot"></span>
-            </span>
-            <span class="dot-elbow-vertical experience-elbow"></span>
-            <span class="dot-elbow-horizontal"></span>
-          </div>
-          <div class="list-item-content item2">
-            <span class="name">Peer Mentor</span>
-            <span class="company"
-              >Northwestern University&nbsp;&nbsp;|&nbsp;&nbsp;Evanston,
-              IL</span
-            >
-            <span class="date">Jan. 2025 &ndash; Mar. 2025</span>
-            <span class="description"> CS 321 Programming Languages </span>
-          </div>
-          <div class="dot-container item3">
-            <span class="dot-outline">
-              <span class="dot experience-dot"></span>
-            </span>
-            <span class="dot-elbow-vertical experience-elbow"></span>
-            <span class="dot-elbow-horizontal"></span>
-          </div>
-          <div class="list-item-content item3">
-            <span class="name">Software Engineer Intern</span>
-            <span class="company"
-              >CDK Global&nbsp;&nbsp;|&nbsp;&nbsp;Hoffman Estates, IL</span
-            >
-            <span class="date">Jun. 2024 &ndash; Aug. 2024</span>
+          <div class="list-item-container">
+            <div class="dot-container experience-dot-container">
+              <span class="dot-outline">
+                <span class="dot experience-dot"></span>
+              </span>
+              <span class="dot-elbow-vertical experience-elbow"></span>
+              <span class="dot-elbow-horizontal"></span>
+            </div>
+            <div class="entry-container">
+              <span class="name">Software Engineer Intern</span>
+              <span class="company"
+                >CDK Global&nbsp;&nbsp;|&nbsp;&nbsp;Hoffman Estates, IL</span
+              >
+              <span class="date">Jun. 2024 &ndash; Aug. 2024</span>
+            </div>
             <span class="description"> Roadster </span>
           </div>
         </div>
@@ -195,13 +190,12 @@
             <div class="project-text">
               <span class="project-title">Almost-C Compiler</span>
               <span class="project-description">
-                A compiler that translates a C-like language into x86-64
-                assembly code, built from scratch in C++. Uses advanced
-                compilation techniques including register allocation,
-                instruction selection, and optimizations such as constant
+                A compiler that lowers a C-like language into an IR and
+                generates Intel x86-64 assembly code, built from scratch in C++.
+                Implements graph coloring register allocation, abstract syntax
+                tree instruction selection, and optimizations including constant
                 propagation and dead-code elimination. Achieved 3rd place out of
-                18 participants in the end-of-quarter compiler performance
-                competition.
+                18 participants in the final compiler performance competition.
               </span>
             </div>
           </div>
@@ -214,11 +208,12 @@
             <div class="project-text">
               <span class="project-title">CAT LLVM Pass</span>
               <span class="project-description">
-                An LLVM pass written in C++ that optimizes programs that use the
-                CAT language. Efficiently performs reaching definition and
-                liveness analyses. Reduces execution cost by eliminating CAT API
-                calls via constant optimizations, function inlining, and loop
-                peeling.
+                An LLVM pass written in C++ that optimizes programs that use a
+                toy language that supports basic arithmetic operations.
+                Efficiently performs reaching definition and liveness analyses
+                to eliminate operations. Reduced execution cost by 36% through
+                optimizations such as constant folding, dead-code elimination,
+                function inlining, and loop unrolling.
               </span>
             </div>
           </div>
